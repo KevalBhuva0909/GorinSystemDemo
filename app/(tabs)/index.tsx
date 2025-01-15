@@ -1,6 +1,10 @@
 import { Images } from "@/assets/icons";
 import Header from "@/components/Header";
-import { CarouselArray, OptionsTabs } from "@/constants/ConstantArrays";
+import {
+  CarouselArray,
+  KidsList,
+  OptionsTabs,
+} from "@/constants/ConstantArrays";
 import { ImageBackground } from "expo-image";
 import React, { useState } from "react";
 import {
@@ -93,7 +97,13 @@ const HomeScreen = () => {
 
         <View style={styles.section}>
           {/* Shiurim Section */}
-          <Text style={styles.sectionTitle}>Shiurim</Text>
+          <View style={styles.sectionTitleView}>
+            <Text style={styles.sectionTitle}>Shiurim</Text>
+            <TouchableOpacity>
+              <Text style={styles.viewMoreText}>View more</Text>
+            </TouchableOpacity>
+          </View>
+
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {["Jumash", "Tania", "Rambam", "Hayom"].map((item) => (
               <View key={item} style={styles.card}>
@@ -122,7 +132,13 @@ const HomeScreen = () => {
 
         <View style={styles.section}>
           {/* Nigunim Section */}
-          <Text style={styles.sectionTitle}>Nigunim</Text>
+          <View style={styles.sectionTitleView}>
+            <Text style={styles.sectionTitle}>Nigunim</Text>
+            <TouchableOpacity>
+              <Text style={styles.viewMoreText}>View more</Text>
+            </TouchableOpacity>
+          </View>
+
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {["Relaxing", "Chabad Nigunim"].map((item) => (
               <View key={item} style={styles.card}>
@@ -134,7 +150,13 @@ const HomeScreen = () => {
 
         <View style={styles.section}>
           {/* Live Discussion Section */}
-          <Text style={styles.sectionTitle}>Live group discussion</Text>
+          <View style={styles.sectionTitleView}>
+            <Text style={styles.sectionTitle}>Live group discussion</Text>
+            <TouchableOpacity>
+              <Text style={styles.viewMoreText}>View more</Text>
+            </TouchableOpacity>
+          </View>
+
           <View>
             <Text>Example discussion 1</Text>
           </View>
@@ -142,11 +164,28 @@ const HomeScreen = () => {
 
         <View style={styles.section}>
           {/* Kids Section */}
-          <Text style={styles.sectionTitle}>Kids</Text>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {["Moses", "Exodus"].map((item) => (
-              <View key={item} style={styles.card}>
-                <Text style={styles.cardTitle}>{item}</Text>
+          <View style={styles.sectionTitleView}>
+            <Text style={styles.sectionTitle}>Kids</Text>
+            <TouchableOpacity>
+              <Text style={styles.viewMoreText}>View more</Text>
+            </TouchableOpacity>
+          </View>
+          <ScrollView showsHorizontalScrollIndicator={false}>
+            {KidsList.slice(0, 2).map((item, index) => (
+              <View style={styles.card}>
+                <View style={styles.imageViewOfKids}>
+                  <Image source={item.image} style={styles.image} />
+                </View>
+                <View style={styles.textContainer}>
+                  <Text style={styles.title}>{item.title}</Text>
+                  <Text style={styles.subtitle}>{item.subtile}</Text>
+                  <Text style={styles.sessions}>
+                    {item.noOfSession} session
+                  </Text>
+                </View>
+                <TouchableOpacity style={styles.button}>
+                  <Text style={styles.buttonText}>Read →</Text>
+                </TouchableOpacity>
               </View>
             ))}
           </ScrollView>
@@ -253,22 +292,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
   },
   sectionTitle: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "600",
-    marginBottom: 5,
+    marginBottom: 10,
+    lineHeight: 24,
+    color: "#000000",
   },
   card: {
-    width: 150,
-    height: 200,
-    marginRight: 10,
-    backgroundColor: "#ffffff",
-    borderRadius: 10,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    justifyContent: "center",
+    flexDirection: "row",
     alignItems: "center",
+    paddingLeft: 5,
+    paddingVertical: 15,
   },
   cardTitle: {
     fontSize: 16,
@@ -399,6 +433,62 @@ const styles = StyleSheet.create({
     height: 30,
     width: 30,
     resizeMode: "contain",
+  },
+  image: {
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+  },
+  textContainer: {
+    height: 80,
+    justifyContent: "space-between",
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#333",
+  },
+  subtitle: {
+    fontSize: 14,
+    color: "#666",
+    marginVertical: 4,
+  },
+  sessions: {
+    fontSize: 12,
+    color: "#999",
+  },
+  button: {
+    height: 80,
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    position: "absolute",
+    right: 0,
+  },
+  buttonText: {
+    color: "#F15223",
+    fontSize: 14,
+    fontWeight: "bold",
+  },
+  imageViewOfKids: {
+    padding: 10,
+    borderRadius: 10,
+    backgroundColor: "#FFFFFF",
+    marginRight: 16,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+  },
+  sectionTitleView: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  viewMoreText: {
+    color: "#5E626C",
+    fontSize: 14,
+    fontWeight: "500",
+    lineHeight: 24,
   },
 });
 

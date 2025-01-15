@@ -10,4 +10,6 @@ export const Images = {
   DonationBackground: require("./donationBackground.png"),
   QuotesBackground: require("./quotesBackground.png"),
   QuotesIcon: require("./quotesIcon.png"),
+  Kids1: require("./kids1.png"),
+  Kids2: require("./kids2.png"),
 };

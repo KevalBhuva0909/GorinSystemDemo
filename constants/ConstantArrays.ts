@@ -46,3 +46,34 @@ export const OptionsTabs = [
     image: Images.Recents,
   },
 ];
+
+export const KidsList = [
+  {
+    id: 1,
+    image: Images.Kids1,
+    title: "Moises",
+    subtile: "The story of Egypt",
+    noOfSession: 21,
+  },
+  {
+    id: 2,
+    image: Images.Kids2,
+    title: "Exodus",
+    subtile: "The story from Egypt",
+    noOfSession: 42,
+  },
+  {
+    id: 3,
+    image: Images.Kids1,
+    title: "Moises",
+    subtile: "The story of Egypt",
+    noOfSession: 21,
+  },
+  {
+    id: 4,
+    image: Images.Kids2,
+    title: "Exodus",
+    subtile: "The story from Egypt",
+    noOfSession: 43,
+  },
+];
