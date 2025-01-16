@@ -26,22 +26,22 @@ export const CarouselArray = [
 
 export const OptionsTabs = [
   {
-    id: 1,
+    id: "1",
     title: "Download",
     image: Images.Download,
   },
   {
-    id: 2,
+    id: "2",
     title: "Routine",
     image: Images.Routine,
   },
   {
-    id: 3,
+    id: "3",
     title: "Favorites",
     image: Images.Favorites,
   },
   {
-    id: 4,
+    id: "4",
     title: "Recents",
     image: Images.Recents,
   },
