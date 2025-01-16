@@ -16,4 +16,6 @@ export const Images = {
   Person1: require("./person1.png"),
   Person2: require("./person2.png"),
   Person3: require("./person3.png"),
+  Nigunim1: require("./nigunim1.png"),
+  Nigunim2: require("./nigunim2.png"),
 };

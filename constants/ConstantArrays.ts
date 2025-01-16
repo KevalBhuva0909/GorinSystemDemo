@@ -164,3 +164,27 @@ export const LiveDiscussion = [
     ],
   },
 ];
+
+export const NigunimList = [
+  {
+    id: 1,
+    image: Images.Nigunim1,
+    title: "Calm Jewish",
+    purpose: "to relax",
+    noOfSession: 43,
+  },
+  {
+    id: 2,
+    image: Images.Nigunim2,
+    title: "Chabod Nigam",
+    purpose: "chabad music",
+    noOfSession: 43,
+  },
+  {
+    id: 3,
+    image: Images.Nigunim1,
+    title: "Calm Jewish",
+    purpose: "to relax",
+    noOfSession: 43,
+  },
+];
