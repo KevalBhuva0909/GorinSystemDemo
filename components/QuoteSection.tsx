@@ -24,9 +24,13 @@ const QuoteSection: React.FC<QuoteSectionProps> = ({
   return (
     <View style={styles.quoteSection}>
       <ImageBackground source={background} style={styles.quotesBackgroundImage}>
-        <Image source={icon} style={styles.quotesIcon} />
-        <Text style={styles.quote}>{quote}</Text>
-        <Text style={styles.quoteAuthor}>{author}</Text>
+        <View
+          style={{ width: "100%", paddingHorizontal: 50, paddingVertical: 20 }}
+        >
+          <Image source={icon} style={styles.quotesIcon} />
+          <Text style={styles.quote}>{quote}</Text>
+          <Text style={styles.quoteAuthor}>{author}</Text>
+        </View>
       </ImageBackground>
     </View>
   );
@@ -55,8 +59,6 @@ const styles = StyleSheet.create({
     height: 300,
     width: "100%",
     resizeMode: "contain",
-    paddingHorizontal: 40,
-    paddingVertical: 20,
   },
   quotesIcon: {
     height: 30,

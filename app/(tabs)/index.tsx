@@ -125,11 +125,9 @@ const HomeScreen = () => {
         </View>
 
         <QuoteSection
-          background={Images.QuotesBackground} // Replace with your actual image source
-          icon={Images.QuotesIcon} // Replace with your actual image source
-          quote={`"In that era, there will be neither famine or war, envy or competition, 
-        for good will flow in abundance and all the delights will be freely available as dust. 
-        The occupation of the entire world will be solely to know G-d."`}
+          background={Images.QuotesBackground}
+          icon={Images.QuotesIcon}
+          quote={`"In that era, there will be neither famine or war, envy or competition, for good will flow in abundance and all the delights will be freely available as dust. The occupation of the entire world will be solely to know G-d."`}
           author="- Mishna Torah"
         />
 
