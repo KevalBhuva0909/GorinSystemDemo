@@ -77,3 +77,90 @@ export const KidsList = [
     noOfSession: 43,
   },
 ];
+
+export const LiveDiscussion = [
+  {
+    id: 1,
+    title: "Lorem ipsum",
+    subTitle: "Lorem Ipsum is simply dummy text of the printing.",
+    author: "Rebba",
+    viewers: [
+      {
+        id: 1,
+        profile: Images.Person1,
+      },
+      {
+        id: 2,
+        profile: Images.Person2,
+      },
+      {
+        id: 3,
+        profile: Images.Person3,
+      },
+      {
+        id: 4,
+        profile: Images.Person2,
+      },
+      {
+        id: 5,
+        profile: Images.Person3,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Lorem ipsum",
+    subTitle: "Lorem Ipsum is simply dummy text of the printing.",
+    author: "Rebba",
+    viewers: [
+      {
+        id: 1,
+        profile: Images.Person1,
+      },
+      {
+        id: 2,
+        profile: Images.Person2,
+      },
+      {
+        id: 3,
+        profile: Images.Person3,
+      },
+      {
+        id: 4,
+        profile: Images.Person2,
+      },
+      {
+        id: 5,
+        profile: Images.Person3,
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Lorem ipsum",
+    subTitle: "Lorem Ipsum is simply dummy text of the printing.",
+    author: "Rebba",
+    viewers: [
+      {
+        id: 1,
+        profile: Images.Person1,
+      },
+      {
+        id: 2,
+        profile: Images.Person2,
+      },
+      {
+        id: 3,
+        profile: Images.Person3,
+      },
+      {
+        id: 4,
+        profile: Images.Person2,
+      },
+      {
+        id: 5,
+        profile: Images.Person3,
+      },
+    ],
+  },
+];

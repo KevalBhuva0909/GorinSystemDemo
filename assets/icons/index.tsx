@@ -12,4 +12,8 @@ export const Images = {
   QuotesIcon: require("./quotesIcon.png"),
   Kids1: require("./kids1.png"),
   Kids2: require("./kids2.png"),
+  LiveMark: require("./liveMark.png"),
+  Person1: require("./person1.png"),
+  Person2: require("./person2.png"),
+  Person3: require("./person3.png"),
 };
